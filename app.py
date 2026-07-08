@@ -52,6 +52,28 @@ if selected:
 else:
     st.info("No hobbies selected yet.")
 
+# Dictionary mapping each hobby to a fun fact
+hobby_facts = {
+    "Dancing": "Dancing burns about 300 calories per hour.",
+    "Reading": "The average person reads 12 books a year.",
+    "Sports": "Regular exercise improves memory by 20%.",
+    "Gaming": "The global gaming industry is worth $180 billion.",
+    "Cooking": "The world's oldest recipe is over 4,000 years old.",
+}
+
+# Get the list of hobbies from the dictionary keys
+hobbies = list(hobby_facts.keys())
+
+# Selectbox using the dictionary keys as options
+hobby = st.selectbox("Select a Hobby:", hobbies)
+
+# Look up the fun fact from the dictionary
+if hobby in hobby_facts:
+    st.info(hobby_facts[hobby])
+else:
+    st.warning("No fun fact available for this hobby yet.")
+
+
 # Slider
 level = st.slider("Choose a level", 1, 5)
 st.write(f"Selected level: {level}")
