@@ -134,6 +134,6 @@ if st.button("Submit"):
             st.write(f"Starts with 'A': {name.upper().startswith('A')}")
                 
             # Call the function with name and gender as arguments
-            st.success(generate_greeting(name, gender))
+            # st.success(generate_greeting(name, gender))
 
 
