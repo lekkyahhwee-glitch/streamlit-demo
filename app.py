@@ -65,7 +65,7 @@ hobby_facts = {
 hobbies = list(hobby_facts.keys())
 
 # Selectbox using the dictionary keys as options
-hobby = st.selectbox("Select a Hobby:", hobbies)
+hobby = st.selectbox("Select a Hobby to read up more about it!", hobbies)
 
 # Look up the fun fact from the dictionary
 if hobby in hobby_facts:
