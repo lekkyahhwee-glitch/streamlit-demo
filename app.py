@@ -126,8 +126,6 @@ if st.button("Submit"):
             st.write(f"Number of characters: {len(name)}")
             st.write(f"Your name reversed: {name[::-1]}")
             st.write(f"Starts with 'A': {name.upper().startswith('A')}")
-            # Call the function with name and gender as arguments
-            st.success(generate_greeting(name, gender))
           
 
 
