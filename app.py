@@ -79,7 +79,7 @@ level = st.slider("Choose a level", 1, 5)
 st.write(f"Selected level: {level}")
 
 # Text input with string processing
-name = st.text_input("Enter your name", "Type here...")
+name = st.text_input("Enter your name", "Type here...").strip()
 
 if st.button("Submit"):
     # Check if the user has typed a real name
