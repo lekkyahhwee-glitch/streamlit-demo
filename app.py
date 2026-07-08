@@ -6,7 +6,7 @@ st.html(
     """
     <style>
     .stApp {
-        background: linear-gradient(315deg, #4f2991 3%, #7dc4ff 38%, #36cfcc 68%);
+        background: linear-gradient(linear-gradient(to bottom, #FFD1DC, #FFFFFF);
         /* Or a solid color: background-color: #e6f7ff; */
     }
     </style>
