@@ -13,6 +13,25 @@ st.html(
     """
 )
 
+# --- Add these functions after the import lines ---
+
+def generate_greeting(name, gender):
+    """Return a personalised greeting based on name and gender."""
+    title = "Mr." if gender == "Male" else "Ms."
+    greeting = f"Welcome {title} {name.title()}!"
+    return greeting
+
+def get_level_description(level):
+    """Return a word description for the numeric level."""
+    descriptions = {
+        1: "Beginner",
+        2: "Elementary",
+        3: "Intermediate",
+        4: "Advanced",
+        5: "Expert"
+    }
+    return descriptions[level]
+
 # App title
 st.title("Kyah Hwee's First App")
 
@@ -40,11 +59,9 @@ if st.checkbox("Show message"):
    
 # Radio button
 gender = st.radio("Select Gender:", ['Male', 'Female'])
-st.success(f"Selected: {gender}")
-if gender == "Male":
-    st.write("You have chosen Male")
-else:
-    st.write("You have chosen Female")
+
+# Use the generate_greeting function instead of if/else
+# (We need the name variable too, so this will work with the text input below)
 
 # Selectbox - using a list variable instead of hardcoded values
 hobbies = ["Dancing", "Reading", "Sports", "Gaming",
