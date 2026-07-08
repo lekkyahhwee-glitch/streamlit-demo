@@ -1,12 +1,17 @@
 import streamlit as st
 from PIL import Image
 
-[theme]
-primaryColor = "#FF4B4B"
-backgroundColor = "#0E1117"
-secondaryBackgroundColor = "#262730"
-textColor = "#FAFAFA"
-font = "sans serif"
+# Inject custom CSS to target the main app container
+st.html(
+    """
+    <style>
+    .stApp {
+        background: linear-gradient(315deg, #4f2991 3%, #7dc4ff 38%, #36cfcc 68%);
+        /* Or a solid color: background-color: #e6f7ff; */
+    }
+    </style>
+    """
+)
 
 # App title
 st.title("Kyah Hwee's First App")
