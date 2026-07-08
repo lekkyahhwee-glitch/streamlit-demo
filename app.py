@@ -112,7 +112,7 @@ level = st.slider("Choose a level", 1, 5)
 st.write(f"Your level: {get_level_description(level)}")
 
 # New slider for practice hours
-hours = st.slider("Hours of practice per week", 1, 20, 5)
+hours = st.slider("**Hours of practice per week**", 1, 20, 5)
 
 # Calculate totals using arithmetic operators
 monthly = hours * 4          # multiplication
