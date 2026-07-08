@@ -1,7 +1,6 @@
 import streamlit as st
 from PIL import Image
 
-toml
 [theme]
 primaryColor = "#FF4B4B"
 backgroundColor = "#0E1117"
