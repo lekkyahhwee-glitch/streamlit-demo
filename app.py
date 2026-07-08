@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 
 # App title
-st.title("Simple Streamlit Demo")
+st.title("Kyah Hwee's First App")
 
 # Header and subheader
 st.header("Welcome to My App")
