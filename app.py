@@ -109,10 +109,7 @@ st.write(f"Your level: {get_level_description(level)}")
 # Text input
 name = st.text_input("Enter your name", "Type here...").strip()
 if st.button("Submit"):
-    # Call the function with name and gender as arguments
-    st.success(generate_greeting(name, gender))
 
-if st.button("Submit"):
     # Check if the user has typed a real name
     if name == "Type here..." or name == "":
         st.warning("Please enter your name first.")
@@ -129,6 +126,8 @@ if st.button("Submit"):
             st.write(f"Number of characters: {len(name)}")
             st.write(f"Your name reversed: {name[::-1]}")
             st.write(f"Starts with 'A': {name.upper().startswith('A')}")
+            # Call the function with name and gender as arguments
+            st.success(generate_greeting(name, gender))
           
 
 
