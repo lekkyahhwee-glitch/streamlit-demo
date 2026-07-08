@@ -106,6 +106,29 @@ else:
 level = st.slider("Choose a level", 1, 5)
 st.write(f"Your level: {get_level_description(level)}")
 
+# New slider for practice hours
+hours = st.slider("Hours of practice per week", 1, 20, 5)
+
+# Calculate totals using arithmetic operators
+monthly = hours * 4          # multiplication
+yearly = hours * 52          # multiplication
+daily = round(hours / 7, 1)  # division and rounding
+remaining = 500 - yearly     # subtraction
+
+# Display the yearly total as a prominent metric
+st.metric("Yearly Practice Hours", yearly)
+st.write(f"That is about {daily} hours per day")
+st.write(f"And about {monthly} hours per month")
+
+# Conditional feedback based on the calculation
+if yearly > 500:
+    st.success(f"You are on track to mastery with {yearly} hours per year!")
+elif yearly > 250:
+    st.info(f"Good progress! {remaining} more hours to reach 500.")
+else:
+    st.warning(f"Keep going! You need {remaining} more hours to reach 500.")
+
+
 # Text input
 name = st.text_input("Enter your name", "Type here...").strip()
 if st.button("Submit"):
