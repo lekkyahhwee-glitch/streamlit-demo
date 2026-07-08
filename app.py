@@ -2,16 +2,17 @@ import streamlit as st
 from PIL import Image
 
 # Inject custom CSS to target the main app container
-st.html(
-    """
-    <style>
-    .stApp {
-        background: linear-gradient(linear-gradient(to bottom, #FFD1DC, #FFFFFF);
-        /* Or a solid color: background-color: #e6f7ff; */
-    }
-    </style>
-    """
-)
+<style>
+/* Main body gradient */
+.stApp {
+    background: linear-gradient(to bottom, #FFD1DC, #FFFFFF);
+}
+
+/* Optional: Make the sidebar match the top pink color */
+section[data-testid="stSidebar"] {
+    background-color: #FFD1DC;
+}
+</style>
 
 # --- Add these functions after the import lines ---
 
