@@ -126,14 +126,12 @@ if st.button("Submit"):
             st.error("Name should contain letters only!")
         else:
             # Display string method results
-            st.success(f"Hello, {name.title()}!")
+            st.success(generate_greeting(name, gender))
             st.write(f"Uppercase: {name.upper()}")
             st.write(f"Lowercase: {name.lower()}")
             st.write(f"Number of characters: {len(name)}")
             st.write(f"Your name reversed: {name[::-1]}")
             st.write(f"Starts with 'A': {name.upper().startswith('A')}")
-                
-            # Call the function with name and gender as arguments
-            # st.success(generate_greeting(name, gender))
+          
 
 
