@@ -34,9 +34,23 @@ if gender == "Male":
 else:
     st.write("You have chosen Female")
 
-# Selectbox
-hobby = st.selectbox("Select a Hobby:", ['Dancing', 'Reading', 'Sports'])
-st.write("Your hobby is:", hobby)
+# Selectbox - using a list variable instead of hardcoded values
+hobbies = ["Dancing", "Reading", "Sports", "Gaming",
+           "Cooking", "Music", "Photography", "Gardening"]
+
+hobby = st.selectbox("Select your main hobby:", hobbies)
+st.write("Your main hobby is:", hobby)
+
+# Multiselect - lets the user pick more than one hobby
+selected = st.multiselect("Pick all your hobbies:", hobbies)
+
+# Loop through the selected hobbies and display each one
+if selected:
+    st.write(f"You selected {len(selected)} hobbies:")
+    for h in selected:
+        st.write(f"  - {h}")
+else:
+    st.info("No hobbies selected yet.")
 
 # Slider
 level = st.slider("Choose a level", 1, 5)
